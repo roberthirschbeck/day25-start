@@ -54,11 +54,25 @@ import pandas
 #
 # monday = data[data.day == "Monday"]
 # print((monday.temp * (9 / 5)) + 32)
+#
+# data_dict = {
+#     "students": ["Amy", "James", "Angela"],
+#     "scores": [76, 56, 65]
+# }
+#
+# data = pandas.DataFrame(data_dict)
+# data.to_csv("new_data.csv")
 
-data_dict = {
-    "students": ["Amy", "James", "Angela"],
-    "scores": [76, 56, 65]
-}
 
-data = pandas.DataFrame(data_dict)
-data.to_csv("new_data.csv")
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+# print(data)
+
+# data_dict = {
+#     "color": data["Primary Fur Color"],
+#     "count": data["Primary Fur Color"].count()
+# }
+
+color = data["Primary Fur Color"].values
+print(color)
+
+# new_data = pandas.DataFrame(data_dict)
